@@ -94,6 +94,7 @@
     <Compile Include="src\CameraResponsibility.cs" />
     <Compile Include="src\DataLinkResponsibility.cs" />
     <Compile Include="src\ElseResponsibility.cs" />
+    <Compile Include="src\HistoricalDataResponsibility.cs" />
     <Compile Include="src\IOPageResponsibility.cs" />
     <Compile Include="src\KSPWebServerDispatcher.cs" />
     <Compile Include="src\PluginLogger.cs" />

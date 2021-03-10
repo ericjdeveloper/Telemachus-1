@@ -1,0 +1,98 @@
+#top-panel, #bottom-panel{
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display:-webkit-flex;
+  display:-webkit-flexbox;
+  display:-ms-flex;
+  display: flex;
+  margin-bottom: 10px;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+#bottom-panel div:last-child{
+  flex-grow: 2;
+}
+
+#gt-map-container{
+  margin-right: auto;
+  width: 500px;
+}
+
+#navigation-and-atmospheric-density, #gt-map-container{
+  max-height: 280px;
+}
+
+.map{
+  height: 200px;
+}
+
+.no-map-indicator{
+  text-align: center;
+  vertical-align: bottom;
+  margin: 75px;
+  font-size: 30px;
+}
+
+#navigation-and-atmospheric-density .atmospheric-density-wrapper{
+  width: 200px;
+}
+
+#navigation-and-atmospheric-density .atmospheric-density-wrapper progress{
+  height: 20px;
+}
+
+#navigation-and-atmospheric-density .navigation-wrapper{
+  margin-bottom: 20px;
+}
+
+#landing-data{
+  margin-left: auto;
+}
+
+#throttle-and-button-readout{
+  margin-left: 10px;
+  width: 300px;
+}
+
+.throttle-wrapper{
+  width: 250px;
+}
+
+.throttle-wrapper p, .atmospheric-density-wrapper p{
+  font-size: 20px;
+}
+
+.throttle-wrapper .throttle{
+  height: 20px;
+}
+
+#button-panel{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#ablator-readout{
+  width: 200px;
+}
+
+#ablator-readout progress{
+  width: 100%;
+}
+
+.camera{
+  height: 300px;
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.camera .readout-display{
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.camera .camera-image-wrapper, #camera-image{
+  width: 200px;
+  height: 200px;
+}

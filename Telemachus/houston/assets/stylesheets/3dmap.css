@@ -1,0 +1,31 @@
+html, body {margin:0;padding:0;height:100%}
+
+html, body, #content, #orbital-map-container{
+  height:100%;
+}
+
+#orbital-map-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#orbital-map{
+  flex-grow: 1;
+  position: relative;
+}
+
+#orbital-map:-webkit-full-screen{
+  width: 100%;
+  height: 100%;
+}
+
+.dg.main{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+}
+
+#orbital-map-container .dg.main input{
+  font-family: sans-serif;
+}

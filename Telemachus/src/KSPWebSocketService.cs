@@ -50,14 +50,22 @@ namespace Telemachus
         /// Process a message recieved from a client
         protected override void OnMessage(MessageEventArgs e)
         {
+
+            PluginLogger.print(e.Type.ToString());
             // We only care about text messages, for now.
             if (e.Type != Opcode.Text) return;
+
             dataRates.RecieveDataFromClient(e.RawData.Length);
+
+
 
             // deserialize the message as JSON
             var json = SimpleJson.SimpleJson.DeserializeObject(e.Data) as SimpleJson.JsonObject;
 
-            lock(dataLock)
+            PluginLogger.print("printing json input data: ");
+            PluginLogger.print(json.ToString());
+
+            lock (dataLock)
             {
                 // Do any tasks requested here
                 foreach (var entry in json)
@@ -119,7 +127,7 @@ namespace Telemachus
                 allVariables = subscriptions.Union(oneShotRuns).Union(binarySubscriptions).ToArray();
                 oneShotRuns.Clear();
             }
-
+            
             var vessel = api.getVessel();
 
             // Now, process them all into a data dictionary
@@ -131,6 +139,7 @@ namespace Telemachus
                 try
                 {
                     apiResults[apiString] = api.ProcessAPIString(apiString);
+                    
                 }
                 catch (IKSPAPI.UnknownAPIException)
                 {

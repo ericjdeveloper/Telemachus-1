@@ -62,7 +62,7 @@ namespace Telemachus
         {
             var ret = new Dictionary<string, object>();
             if (argstring.StartsWith("?")) argstring = argstring.Substring(1);
-
+            
             foreach (var part in argstring.Split('&'))
             {
                 var subParts = part.Split('=');

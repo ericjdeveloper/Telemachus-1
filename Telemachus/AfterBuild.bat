@@ -1,5 +1,5 @@
-rd /s /q  "%1..\publish\GameData"
-rd /s /q "%1..\ksp-telemachus-dev\GameData\Telemachus"
+rd  "%1..\publish\GameData" -Recurse
+rd "%1..\ksp-telemachus-dev\GameData\Telemachus" -Recurse
 
 xcopy "%2Servers.dll" "%1..\publish\GameData\Telemachus\Plugins\" /e /y /i /r
 xcopy "%2Telemachus.dll" "%1..\publish\GameData\Telemachus\Plugins\" /e /y /i /r
